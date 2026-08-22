@@ -1,0 +1,36 @@
+/* Xlocaltime - styling for converted times */
+
+/*
+ * Goal: disturb the host page's layout as little as possible.
+ * The wrapper may wrap so that text does not overlap inside narrow
+ * table cells, while each individual time stays on one line.
+ */
+.lt-time {
+  unicode-bidi: isolate;
+  white-space: normal;
+}
+
+.lt-time .lt-orig,
+.lt-time .lt-conv {
+  white-space: nowrap;
+  font-size: inherit; /* both times match the surrounding text size */
+}
+
+/* The original time is only dimmed, to set it apart from the local one */
+.lt-time .lt-orig {
+  opacity: 0.55;
+}
+
+.lt-time.lt-highlight .lt-conv {
+  background: rgba(37, 155, 96, 0.16);
+  border-bottom: 1px dashed rgba(37, 155, 96, 0.75);
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .lt-time.lt-highlight .lt-conv {
+    background: rgba(80, 220, 150, 0.18);
+    border-bottom-color: rgba(80, 220, 150, 0.8);
+  }
+}

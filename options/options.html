@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title data-i18n-title-key="optionsTitle">Xlocaltime Settings</title>
+  <link rel="stylesheet" href="../fonts/vazirmatn.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Xlocaltime</h1>
+      <p class="sub" data-i18n="tagline"></p>
+    </header>
+
+    <section class="card">
+      <div class="field">
+        <label for="lang" data-i18n="langLabel"></label>
+        <select id="lang">
+          <option value="auto" data-i18n="langAuto"></option>
+          <option value="fa">فارسی</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+      <label class="switch-row">
+        <input type="checkbox" id="enabled">
+        <span data-i18n="enabledLabel"></span>
+      </label>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="citiesTitle"></h2>
+
+      <div class="field">
+        <label for="originalCity" data-i18n="originalCityLabel"></label>
+        <input list="cityList" id="originalCity" data-i18n-ph="originalCityPlaceholder" autocomplete="off">
+        <div class="hint" id="originalHint"></div>
+      </div>
+
+      <div class="field">
+        <label for="localCity" data-i18n="localCityLabel"></label>
+        <input list="cityList" id="localCity" data-i18n-ph="localCityPlaceholder" autocomplete="off">
+        <div class="hint" id="localHint"></div>
+        <button type="button" class="link" id="useSystemTz" data-i18n="useSystemTz"></button>
+      </div>
+
+      <datalist id="cityList"></datalist>
+
+      <div class="preview" id="preview"></div>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="sitesTitle"></h2>
+      <label class="radio-row">
+        <input type="radio" name="scope" value="list" id="scopeList">
+        <span data-i18n="scopeListLabel"></span>
+      </label>
+      <label class="radio-row">
+        <input type="radio" name="scope" value="all" id="scopeAll">
+        <span data-i18n="scopeAllLabel"></span>
+      </label>
+      <div class="field">
+        <label for="sites" data-i18n="sitesLabel"></label>
+        <textarea id="sites" rows="5" spellcheck="false" placeholder="varzesh3.com"></textarea>
+        <div class="hint" data-i18n-html="sitesHint"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="displayTitle"></h2>
+      <div class="field">
+        <label for="mode" data-i18n="modeLabel"></label>
+        <select id="mode">
+          <option value="replace" data-i18n="modeReplace"></option>
+          <option value="both" data-i18n="modeBoth"></option>
+        </select>
+        <div class="hint" data-i18n="modeHint"></div>
+      </div>
+      <label class="switch-row">
+        <input type="checkbox" id="hour12">
+        <span data-i18n="hour12Label"></span>
+      </label>
+      <label class="switch-row">
+        <input type="checkbox" id="showDayShift">
+        <span data-i18n="dayShiftLabel"></span>
+      </label>
+      <label class="switch-row">
+        <input type="checkbox" id="highlight">
+        <span data-i18n="highlightLabel"></span>
+      </label>
+      <label class="switch-row">
+        <input type="checkbox" id="strict">
+        <span data-i18n="strictLabel"></span>
+      </label>
+      <label class="switch-row">
+        <input type="checkbox" id="forceSafe">
+        <span data-i18n="forceSafeLabel"></span>
+      </label>
+      <div class="hint" data-i18n="forceSafeHint"></div>
+      <div class="field">
+        <label for="ignoreSelectors" data-i18n="ignoreLabel"></label>
+        <input type="text" id="ignoreSelectors" spellcheck="false" placeholder=".score, .result">
+      </div>
+    </section>
+
+    <div class="actions">
+      <button id="save" class="primary" data-i18n="save"></button>
+      <button id="reset" data-i18n="reset"></button>
+      <span id="status" class="status"></span>
+    </div>
+  </div>
+
+  <script src="../src/tz.js"></script>
+  <script src="../src/i18n.js"></script>
+  <script src="../src/cities.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

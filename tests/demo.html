@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>Xlocaltime - test page</title>
+  <link rel="stylesheet" href="../src/content.css">
+  <style>
+    body { font: 15px/2 Tahoma, sans-serif; padding: 24px; max-width: 640px; margin: auto; }
+    li { margin: 4px 0; }
+    .box { border: 1px solid #ccc; border-radius: 8px; padding: 12px; margin-top: 16px; }
+  </style>
+  <script>
+    // chrome.storage stub, so the content script can run outside the extension
+    const store = {
+      lang: new URLSearchParams(location.search).get('lang') || 'fa',
+      enabled: true,
+      originalTz: 'Asia/Tehran',
+      localTz: 'America/Toronto',
+      mode: new URLSearchParams(location.search).get('mode') || 'replace',
+      scope: 'all',
+      sites: [],
+      hour12: false,
+      showDayShift: true,
+      highlight: true,
+      strict: true,
+      forceSafe: new URLSearchParams(location.search).has('safe'),
+      ignoreSelectors: '.score'
+    };
+    window.chrome = {
+      storage: {
+        sync: { get: (d, cb) => cb(Object.assign({}, d, store)) },
+        onChanged: { addListener: () => {} }
+      },
+      runtime: { onMessage: { addListener: () => {} } }
+    };
+  </script>
+</head>
+<body>
+  <h1>Fixture: Persian match schedule</h1>
+  <ul>
+    <li>پرسپولیس - استقلال — ساعت ۲۱:۳۰</li>
+    <li>سپاهان - تراکتور — ساعت 19:00</li>
+    <li>بازی شبانه — ساعت ۰۲:۱۵ بامداد</li>
+    <li>Kickoff at 7:30 pm</li>
+    <li>تاریخ 1403/05/12 — ساعت ۰۸:۴۵</li>
+  </ul>
+
+  <div class="box">
+    <p>Must NOT be converted:</p>
+    <ul>
+      <li class="score">نتیجه: ۳:۱</li>
+      <li>زمان‌بندی دقیق 12:34:56</li>
+      <li>نسخهٔ 1.2:33 نامعتبر</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <p>Dynamic content (added after 1 second):</p>
+    <div id="late"></div>
+  </div>
+
+  <div class="box">
+    <p>Narrow table (layout check):</p>
+    <table style="width:280px; border-collapse:collapse; table-layout:fixed;">
+      <tr><td style="border:1px solid #ccc">تراکتور</td><td style="border:1px solid #ccc">پرسپولیس</td><td style="width:70px;border:1px solid #ccc">۱۸:۳۰</td></tr>
+      <tr><td style="border:1px solid #ccc">ملوان</td><td style="border:1px solid #ccc">فجرسپاسی</td><td style="border:1px solid #ccc">۱۹:۳۰</td></tr>
+      <tr><td style="border:1px solid #ccc">ذوب‌آهن</td><td style="border:1px solid #ccc">مس شهربابک</td><td style="border:1px solid #ccc">۱۹:۰۰</td></tr>
+    </table>
+  </div>
+
+  <div class="box" dir="ltr" lang="en">
+    <p>LTR block — arrow must point right:</p>
+    <ul>
+      <li>Match starts at 21:30 (Tehran)</li>
+    </ul>
+  </div>
+
+  <script src="../src/tz.js"></script>
+  <script src="../src/i18n.js"></script>
+  <script src="../src/content.js"></script>
+  <script>
+    setTimeout(() => {
+      document.getElementById('late').textContent = 'بازی افزوده‌شده — ساعت ۲۳:۴۵';
+    }, 1000);
+  </script>
+</body>
+</html>

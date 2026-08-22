@@ -1,0 +1,12 @@
+# ابزارهای محلی توسعه
+.claude/
+
+# فایل‌های سیستم
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# خروجی بسته‌بندی اکستنشن
+*.zip
+*.crx
+*.pem

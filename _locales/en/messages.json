@@ -1,0 +1,10 @@
+{
+  "extName": {
+    "message": "Xlocaltime — site times in your local time",
+    "description": "Extension name shown in the browser."
+  },
+  "extDesc": {
+    "message": "Rewrites times written on websites (e.g. Tehran time) into your own city's time.",
+    "description": "Extension description shown in the browser."
+  }
+}

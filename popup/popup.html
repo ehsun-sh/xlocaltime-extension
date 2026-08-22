@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Xlocaltime</title>
+  <link rel="stylesheet" href="../fonts/vazirmatn.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="head">
+    <strong>Xlocaltime</strong>
+    <label class="toggle">
+      <input type="checkbox" id="enabled">
+      <span data-i18n="popupEnabled"></span>
+    </label>
+  </div>
+
+  <div class="row" id="route">—</div>
+  <div class="row muted" id="clocks">—</div>
+
+  <div class="site">
+    <div class="host" id="host">—</div>
+    <div class="state" id="state">—</div>
+    <button id="toggleSite" class="btn"></button>
+  </div>
+
+  <button id="openOptions" class="btn link" data-i18n="popupOpenOptions"></button>
+
+  <script src="../src/tz.js"></script>
+  <script src="../src/i18n.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

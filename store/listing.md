@@ -89,8 +89,8 @@ from a source timezone the user configures into the user's local timezone.
 |---|---|---|
 | Store icon | 128×128 PNG | `icons/icon128.png` |
 | Screenshots | 1280×800 or 640×400 PNG/JPEG, 1 to 5, no transparency | three ready in `store/screenshots/` |
-| Small promo tile | 440×280 PNG/JPEG | optional |
-| Marquee promo tile | 1400×560 | optional, only for featuring |
+| Small promo tile | 440×280, 24-bit PNG, no alpha | `store/promo/small-tile-440x280.png` |
+| Marquee promo tile | 1400×560, 24-bit PNG, no alpha | `store/promo/marquee-1400x560.png` |
 
 Screenshots are composed by `python tools/make_screenshots.py`, which lays the raw
 captures from `Screenshot/` onto the 1280x800 canvas the store requires:
@@ -106,6 +106,11 @@ Two more would round the set out, if you want the full five:
 
 Capture them at any size and drop them into `Screenshot/`, then add an entry to
 the `SHOTS` list in the script.
+
+The promo tiles come from `python tools/make_promo.py`. They are drawn from
+scratch rather than cut from screenshots, so no third-party logo or brand ends
+up in promotional artwork - a store policy the screenshots themselves are
+exempt from, since they show genuine use.
 
 ---
 

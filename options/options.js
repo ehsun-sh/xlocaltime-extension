@@ -1,4 +1,4 @@
-/* Xlocaltime - options page logic */
+/* X Localtime - options page logic */
 (function () {
   'use strict';
 

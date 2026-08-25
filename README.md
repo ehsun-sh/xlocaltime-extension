@@ -1,10 +1,10 @@
-# Xlocaltime
+# X Localtime
 
 > See the times written on websites in your own city's time.
 
 A Microsoft Edge extension (Chrome-compatible) that rewrites times found on web pages from the site's timezone into yours — no copying times around, no mental arithmetic, no searching for "what time is it in Tehran right now".
 
-**Example:** on [Varzesh3](https://www.varzesh3.com) a match is listed at `۲۱:۳۰` Tehran time. With Xlocaltime enabled and Toronto selected, you read `۱۴:۰۰` right there on the page.
+**Example:** on [Varzesh3](https://www.varzesh3.com) a match is listed at `۲۱:۳۰` Tehran time. With X Localtime enabled and Toronto selected, you read `۱۴:۰۰` right there on the page.
 
 | Before | After |
 |---|---|

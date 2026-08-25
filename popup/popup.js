@@ -1,4 +1,4 @@
-/* Xlocaltime - toolbar popup */
+/* X Localtime - toolbar popup */
 (function () {
   'use strict';
 

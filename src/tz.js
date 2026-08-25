@@ -1,4 +1,4 @@
-/* Xlocaltime - shared timezone conversion helpers */
+/* X Localtime - shared timezone conversion helpers */
 (function (root) {
   'use strict';
 

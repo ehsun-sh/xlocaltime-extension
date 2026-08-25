@@ -1,4 +1,4 @@
-/* Xlocaltime - rewrites times on a page into the local timezone */
+/* X Localtime - rewrites times on a page into the local timezone */
 (function () {
   'use strict';
 

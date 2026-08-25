@@ -1,4 +1,4 @@
-/* Xlocaltime - city list with their IANA timezones */
+/* X Localtime - city list with their IANA timezones */
 window.LT_CITIES = [
   { fa: 'تهران', en: 'Tehran', tz: 'Asia/Tehran' },
   { fa: 'مشهد', en: 'Mashhad', tz: 'Asia/Tehran' },

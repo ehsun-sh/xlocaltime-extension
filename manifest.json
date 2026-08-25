@@ -6,15 +6,11 @@
   "homepage_url": "https://github.com/ehsun-sh/xlocaltime-extension",
   "permissions": [
     "storage",
-    "scripting",
     "activeTab"
-  ],
-  "host_permissions": [
-    "<all_urls>"
   ],
   "action": {
     "default_popup": "popup/popup.html",
-    "default_title": "Xlocaltime",
+    "default_title": "X Localtime",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",

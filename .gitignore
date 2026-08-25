@@ -1,12 +1,15 @@
-# ابزارهای محلی توسعه
+# Local development tooling
 .claude/
 
-# فایل‌های سیستم
+# OS files
 Thumbs.db
 desktop.ini
 .DS_Store
 
-# خروجی بسته‌بندی اکستنشن
+# Packaged extension output
 *.zip
 *.crx
 *.pem
+
+# Build output
+dist/

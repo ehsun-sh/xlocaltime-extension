@@ -1,11 +1,11 @@
-/* Xlocaltime - bilingual layer (Persian / English) */
+/* X Localtime - bilingual layer (Persian / English) */
 (function (root) {
   'use strict';
 
   const MESSAGES = {
     fa: {
       dir: 'rtl',
-      optionsTitle: 'تنظیمات Xlocaltime',
+      optionsTitle: 'تنظیمات X Localtime',
       tagline: 'ساعت‌های نوشته‌شده در سایت‌ها را به وقت شهر شما تبدیل می‌کند.',
 
       langLabel: 'زبان / Language',
@@ -68,7 +68,7 @@
 
     en: {
       dir: 'ltr',
-      optionsTitle: 'Xlocaltime Settings',
+      optionsTitle: 'X Localtime Settings',
       tagline: 'Shows times written on websites in your own city’s time.',
 
       langLabel: 'Language / زبان',

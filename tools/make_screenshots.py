@@ -49,6 +49,17 @@ SHOTS = [
         ],
         'example': ('15:00  London', '10:00  Toronto'),
     },
+    {
+        'file': 'NBA.png',
+        'out': '03-nba-schedule.png',
+        'title': 'Tip-off times without\nthe mental arithmetic',
+        'bullets': [
+            'Sports schedules, TV guides, event and ticket pages',
+            'The converted time keeps its place in the layout',
+            'Highlight it, or let it blend into the page',
+        ],
+        'example': ('19:30  New York', '16:30  Los Angeles'),
+    },
 ]
 
 

@@ -88,17 +88,21 @@ from a source timezone the user configures into the user's local timezone.
 | Asset | Requirement | Status |
 |---|---|---|
 | Store icon | 128×128 PNG | `icons/icon128.png` |
-| Screenshots | 1280×800 or 640×400 PNG/JPEG, 1 to 5, no transparency | `store/screenshots/01-persian-schedule.png`, `02-premier-league.png` |
+| Screenshots | 1280×800 or 640×400 PNG/JPEG, 1 to 5, no transparency | three ready in `store/screenshots/` |
 | Small promo tile | 440×280 PNG/JPEG | optional |
 | Marquee promo tile | 1400×560 | optional, only for featuring |
 
 Screenshots are composed by `python tools/make_screenshots.py`, which lays the raw
-captures from `Screenshot/` onto the 1280x800 canvas the store requires. Two are
-ready; these would round the set out:
+captures from `Screenshot/` onto the 1280x800 canvas the store requires:
 
-3. The options page with both cities filled in and the live preview visible
-4. The toolbar popup showing both clocks and the current site
-5. A page in "both times" mode, where the original time stays visible
+1. `01-persian-schedule.png` - an Iranian league table read in Toronto time
+2. `02-premier-league.png` - Premier League fixtures, Latin digits
+3. `03-nba-schedule.png` - an NBA schedule
+
+Two more would round the set out, if you want the full five:
+
+4. The options page with both cities filled in and the live preview visible
+5. The toolbar popup showing both clocks and the current site
 
 Capture them at any size and drop them into `Screenshot/`, then add an entry to
 the `SHOTS` list in the script.

@@ -88,16 +88,20 @@ from a source timezone the user configures into the user's local timezone.
 | Asset | Requirement | Status |
 |---|---|---|
 | Store icon | 128×128 PNG | `icons/icon128.png` |
-| Screenshots | 1280×800 or 640×400 PNG/JPEG, 1 to 5, no transparency | see `store/screenshots/` |
+| Screenshots | 1280×800 or 640×400 PNG/JPEG, 1 to 5, no transparency | `store/screenshots/01-persian-schedule.png`, `02-premier-league.png` |
 | Small promo tile | 440×280 PNG/JPEG | optional |
 | Marquee promo tile | 1400×560 | optional, only for featuring |
 
-Screenshots worth including, in this order:
+Screenshots are composed by `python tools/make_screenshots.py`, which lays the raw
+captures from `Screenshot/` onto the 1280x800 canvas the store requires. Two are
+ready; these would round the set out:
 
-1. A real site with converted times on screen - the point of the extension in one image
-2. The options page with both cities filled in and the live preview visible
-3. The toolbar popup showing both clocks and the current site
-4. The same page in "both times" mode, so the original stays visible
+3. The options page with both cities filled in and the live preview visible
+4. The toolbar popup showing both clocks and the current site
+5. A page in "both times" mode, where the original time stays visible
+
+Capture them at any size and drop them into `Screenshot/`, then add an entry to
+the `SHOTS` list in the script.
 
 ---
 

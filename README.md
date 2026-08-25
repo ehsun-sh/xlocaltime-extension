@@ -145,6 +145,11 @@ Cities live in [`src/cities.js`](src/cities.js) as `{ fa, en, tz }` — add a li
 
 Issues and pull requests are welcome. For anything substantial, open an issue first so we can agree on the approach. Source comments and documentation are English only; Persian appears in the repository solely as data — translation strings, city names, and test fixtures.
 
+## Privacy
+
+No data is collected, and the extension makes no network requests at all. See
+[PRIVACY.md](PRIVACY.md) for the full policy.
+
 ## License
 
 Code is released under the [MIT License](LICENSE).

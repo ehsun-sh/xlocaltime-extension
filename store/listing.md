@@ -79,7 +79,14 @@ from a source timezone the user configures into the user's local timezone.
 - Does not use or transfer user data for purposes unrelated to the item's single purpose
 - Does not use or transfer user data to determine creditworthiness or for lending purposes
 
-**Privacy policy URL:** not required while no data is collected. If the dashboard asks for one anyway, publish the PRIVACY section of the description as a page (a GitHub Pages file or a Gist works) and link it.
+**Privacy policy URL:** the dashboard asks for one even when nothing is collected. Paste:
+
+```
+https://github.com/ehsun-sh/xlocaltime-extension/blob/main/PRIVACY.md
+```
+
+The page lives in `PRIVACY.md` at the repository root. Keep its "Last updated"
+line current whenever the data behaviour changes.
 
 ---
 
